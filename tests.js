@@ -3,7 +3,7 @@
 var chai = require('chai');
 var assert = chai.assert;
 
-var lib = require('./lib/library.js');
+var lib = require('./lib/aritgeo.js');
 
 describe("Test that a valid array was supplied", function() {
   it("should return Please supply a valid array for Andela ", function() {
