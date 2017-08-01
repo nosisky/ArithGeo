@@ -13,14 +13,6 @@ describe("Test that a valid array was supplied", function() {
   it("should return Please supply a valid array for 123 ", function() {
     assert(
       lib.arithGeo(123), "Please supply a valid array")
-  });
-  it("should return Please supply a valid array for false ", function() {
-    assert(
-      lib.arithGeo(false), "Please supply a valid array")
-  });
-  it("should return Please supply a valid array for {}} ", function() {
-    assert(lib.arithGeo({}), "Please supply a valid array")
-  });
 });
 
 describe("Test for invalid array length", function() {
@@ -35,6 +27,9 @@ describe("Arithmetic Values", function() {
   });
   it("should return Arithmetic for 2,3,4,5", function() {
     assert.equal("Arithmetic", lib.arithGeo([2,3,4,5]))
+  });
+  it("should return Arithmetic for 50,60,70,80", function() {
+    assert.equal("Arithmetic", lib.arithGeo([50,60,70,80]))
   });
 });
 
@@ -51,7 +46,10 @@ describe("Test for Geometric values", function() {
   it("should return Geometric for 2, 6, 18, 54", function() {
     assert.equal("Geometric", lib.arithGeo([2, 6, 18, 54]))
   });
-  it("should return Arithmetic for 10, 30, 90, 270", function() {
+  it("should return Geometric for 10, 30, 90, 270", function() {
     assert.equal("Geometric", lib.arithGeo([10, 30, 90, 270]))
+  });
+  it("should return Geometric for 10,3,16,20", function() {
+    assert.equal(-1, lib.arithGeo([2 , 8 , 32 , 128]))
   });
 });
